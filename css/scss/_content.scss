@@ -1,0 +1,113 @@
+.main{
+    display: flex;
+
+    .navigation{
+        min-width: 334px;
+        border-right: 1px solid rgba(0, 0, 0, 0.20);
+    
+        .search{
+            position: relative;
+            cursor: pointer;
+            width: calc(100% - 7px);
+            margin: 0 auto;
+            padding: 8px 0px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+    
+            input[type="submit"]{
+                position: absolute;
+                left: 0px;
+                cursor: pointer;
+                border: none;
+                background-color: transparent;
+                outline: none;
+                font-size: 0px;
+                background-image: url(../images/icon_search.svg);
+                background-position: center;
+                background-size: 18px 18px;
+                background-repeat: no-repeat;
+    
+                width: 44px;
+                height: 40px;
+            }
+    
+            input[type="search"]{
+                background-color: #fff;
+                width: 100%;
+                height: 40px;
+    
+                border: 1px solid rgba(0, 0, 0, 0.20);
+                border-radius: 6px;
+                padding: 8px 12px 8px 44px;
+    
+                &::placeholder{
+                    font-size: 16px;
+                    color: rgba(0, 0, 0, 0.52);
+                }
+            }
+        }
+    }
+
+    .content{
+        border-left:1px solid rgba(0, 0, 0, 0.20);
+    }
+}
+
+.menu{
+    padding-left: 22px;
+    .item{
+        margin: 8px 0px;
+        a{
+            vertical-align: middle;
+            color: $main_color;
+            @include transition (all);
+
+            &:before{
+                content: '';
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: top;
+
+                vertical-align: middle;
+            }
+
+
+            &:hover{
+                opacity: 50%;
+            }
+        }
+
+        .community::before{
+            background-image: url(../images/icon_menu_1.svg);
+        }
+
+        .real_estate::before{
+            background-image: url(../images/icon_menu_2.svg);
+        }
+
+        .franchises::before{
+            background-image: url(../images/icon_menu_3.svg);
+        }
+        .business::before{
+            background-image: url(../images/icon_menu_4.svg);
+        }
+        .services::before{
+            background-image: url(../images/icon_menu_5.svg);
+        }
+        .suppliers::before{
+            background-image: url(../images/icon_menu_6.svg);
+        }
+        .investments::before{
+            background-image: url(../images/icon_menu_7.svg);
+        }
+        .ideas::before{
+            background-image: url(../images/icon_menu_8.svg);
+        }
+        .plans::before{
+            background-image: url(../images/icon_menu_9.svg);
+        }
+    }
+}

@@ -1,0 +1,49 @@
+.svitch{
+    display: none;
+    cursor: pointer;
+}
+
+.label_svitch{
+    font-size: 0px;
+    cursor: pointer;
+    display: block;
+    width: 66px;
+    height: 28px;
+    border-radius: 36px;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    position: relative;
+
+    @include transition(all);
+
+    &::before{
+        content: 'ПЛЮС';
+        width: 50px;
+        height: 22px;
+        background-color: #FFF;
+        border-radius: 36px;
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.52);
+
+
+        position: absolute;
+        top: 50%;
+        left: 3px;
+        transform: translateY(-50%);
+
+        @include transition(all);
+
+    }
+}
+
+.svitch:checked + .label_svitch{
+    background-color: $bt_svitch_color;
+    &::before{
+        left: 13px;
+        color: $bt_svitch_color;
+    }
+}

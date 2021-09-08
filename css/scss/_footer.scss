@@ -1,0 +1,166 @@
+footer{
+    background-color: rgba(51, 51, 51, 1);
+    padding-top: 40px;
+
+    .logo{
+        
+        img{
+            vertical-align: middle;
+            align-items: center;
+        }
+        .h3{
+            vertical-align: middle;
+            align-items: center;
+            color: #FFF;
+        }
+    }
+
+    .h6{
+        color: rgba(255, 255, 255, 1);
+        opacity: 40%;
+    }
+    .sections{
+        margin-top: 24px;
+        padding-bottom: 34px;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: space-between;
+
+        .sections_item{
+            width: calc(25% - 25px);
+
+            ul{
+                padding-left: 0;
+                li{
+                    vertical-align: middle;
+                    align-items: center;
+                    text-align: left;
+                    margin: 10px 0;
+                    
+
+                    a{
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #fff;
+                        opacity: 40%;
+
+                        @include transition(all);
+
+                        &:hover{
+                            opacity: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .sections_item_icon{
+            a{
+
+                &:before{
+                    content: '';
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 10px;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: top;
+                    background-image: url(../images/icon_soc_6.svg);
+
+                    vertical-align: middle;
+                }
+            }
+            .Facebook{
+                &::before{
+                    background-image: url(../images/icon_soc_1.svg);
+
+                }
+            } 
+            
+            .vk{
+                &::before{
+                    background-image: url(../images/icon_soc_2.svg);
+
+                }
+            } 
+            .telegramm{
+                &::before{
+                    background-image: url(../images/icon_soc_3.svg);
+
+                }
+            } 
+            .Instagram{
+                &::before{
+                    background-image: url(../images/icon_soc_4.svg);
+
+                }
+            } 
+            .Youtube{
+                &::before{
+                    background-image: url(../images/icon_soc_5.svg);
+
+                }
+            } 
+        }
+    }
+    .country{
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .country_items{
+            display: flex;
+            ul{
+                margin-left: 12px;
+                li{
+                    cursor: pointer;
+                    opacity: 40%;
+                    display: inline-block;
+                    position: relative;
+                    margin: 0 12px;
+
+                    @include transition(all);
+                    &::before{
+                        cursor: pointer;
+                        content: "";
+                        display: inline-block;
+                        vertical-align: middle;
+                        align-items: center;
+                        width: 48px;
+                        height: 24px;
+                        border-radius: 4px;
+                        overflow: hidden;
+                        background-image: url(../images/icon_country_1.svg);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+
+                        margin-right: 8px;
+                    }
+
+                    &:hover{
+                        opacity: 100%;
+                    }
+                }
+
+                .kazahstan::before{
+                    background-image: url(../images/icon_country_2.svg);
+                }
+                .belorus::before{
+                    background-image: url(../images/icon_country_3.svg);
+                }
+            }
+
+            color: #fff;
+        }
+        .box{
+            span{
+                opacity: 40%;
+                font-size: 14px;
+                text-transform: uppercase;
+                color: rgba(255, 255, 255, 1);
+                margin-right: 24px;
+            }
+        }
+    }
+}

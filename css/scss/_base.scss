@@ -1,0 +1,96 @@
+$main_color: rgba(0, 0, 0, 1);
+$button_color: #0D870D;
+$bt_svitch_color: #FA961E;
+$notification_color_1: #00B4F0;
+$notification_color_2: #ED2F2F;
+
+$header_shadow: 0px 0px 30px 0px #00000026;
+$element_shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.15);
+
+@mixin transition($property){
+    -webkit-transition: $property 0.3s ease 0s;
+    -moz-transition: $property 0.3s ease 0s;
+    -o-transition: $property 0.3s ease 0s;
+    transition: $property 0.3s ease 0s; 
+}
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.wrapper{
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.page_width{
+    margin: 0 0 0 auto;
+    padding: 0 48px;
+    max-width: 100%;
+}
+
+h1,.h1, h2,.h2, h3,.h3, h4,.h4, h5,.h5, h6,.h6{
+    color: #000;
+    font-weight: 700;
+}
+
+h1,.h1{
+    font-size: 48px;
+}
+
+h2,.h2{
+    font-size: 32px;
+}
+
+h3,.h3{
+    font-size: 24px;
+}
+
+h4,.h4{
+    font-size: 18px;
+}
+
+h5,.h5{
+    font-size: 16px;
+}
+
+h6,.h6{
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.button{
+    border: 1px solid transparent;
+    display: inline-block;
+    padding: 9px 16px;
+    background-color: $button_color;
+    border-radius: 6px;
+
+    @include transition (all);
+
+    span{
+        color: #FFF;
+
+        @include transition (all);
+    }
+
+    .light{
+        font-weight: 400;
+    }
+
+    &:hover{
+        background-color: #FFF;
+
+        border: 1px solid rgba(0, 0, 0, 0.2);
+
+        span{
+            color: $main_color;
+        }
+    }
+}
