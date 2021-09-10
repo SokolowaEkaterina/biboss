@@ -1,0 +1,178 @@
+.main_vidio{
+    padding-top: 34px;
+    padding-bottom: 124px;
+
+    background: linear-gradient(360deg, #ECEEF2 0%, rgba(236, 238, 242, 0) 100%);
+    .title_main_vidio{
+        position: relative;
+        margin-left: 76px;
+        &::before{
+            content: "";
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            left: -76px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: url(../images/icon_vidio.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        span{
+            display: block;
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+
+    h1{
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .vidio_vote{
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        .vidio{
+            width: 832/1120*100%;
+            position: relative;
+            overflow: hidden;
+            border-radius: 17px;
+
+            img{
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+            a{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+
+                &::before{
+                    content: "";
+                    width: 80px;
+                    height: 80px;
+                    //@at-root: block;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%,  -50%);
+                    background-image: url(../images/icon_play.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+
+                    opacity: 50%;
+
+                    @include transition (all);
+                }
+                &::after{
+                    content: "Смотреть видео";
+                    display: block;
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 32px;
+                    color: #FFF;
+                    text-align: center;
+                    width: 115px;
+                    position: absolute;
+                    left: 50%;
+                    bottom: 100px;
+                    transform: translateX(-50%);
+
+                    opacity: 0;
+
+                    @include transition(all);
+                }
+
+                &:hover{
+                    &::before{
+                        opacity: 100;
+                    }
+                    &::after{
+                        opacity: 100;
+                        bottom: 158px;
+                    }
+                }
+            }
+        }
+
+        .vote{
+            width: 256/1120*100%;
+            padding-top: 20px;
+
+            p{
+                width: 100%;
+                //width: 256px;
+                margin-top: 16px;
+                margin-bottom: 16px;
+            }
+
+            .vote_cos_bt{
+                box-sizing: border-box;
+                display: block;
+                position: relative;
+                color: #FFF;
+                width: 100%;
+                //width: 256px;
+                font-weight: 700;
+                font-size: 16px;
+                padding: 18px 48px 18px 75px;
+                margin: 8px 0;
+                text-align: center;
+                background-color: rgba(31, 59, 116, 1);
+                border-radius: 50px;
+
+                @include transition (all);
+
+                &::before{
+                    content: "";
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    //@at-root: block;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    background-color: rgba(59, 89, 152, 1);
+                    background-image: url(../images/icon_soc_1.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 15px 32px;
+                }
+
+                &:hover{
+                    opacity: 40%;
+                }
+            }
+
+            .vote_cos_vk{
+                background-color: rgba(39, 70, 106, 1);
+                &::before{
+                    background-color: rgba(76, 108, 145, 1);
+                    background-image: url(../images/icon_soc_2.svg);
+                    background-size: 32px 17px;
+                }
+            }
+
+            .vote_cos_bt_ok{
+                background-color: rgba(208, 99, 19, 1);
+                &::before{
+                    background-color: rgba(246, 134, 52, 1);
+                    background-image: url(../images/icon_soc_6.svg);
+                    background-size: 18px 30px;
+                }
+            }
+
+            .h4{
+                margin-top: 18px;
+                text-align: center;
+                display: block;
+            }
+        }
+    }
+}

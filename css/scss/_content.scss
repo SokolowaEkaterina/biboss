@@ -1,9 +1,10 @@
 .main{
     display: flex;
+    width: 100%;
 
     .navigation{
         min-width: 334px;
-        border-right: 1px solid rgba(0, 0, 0, 0.20);
+        //float: left;
     
         .search{
             position: relative;
@@ -109,5 +110,21 @@
         .plans::before{
             background-image: url(../images/icon_menu_9.svg);
         }
+    }
+}
+
+.content{
+    width: 100%;
+}
+
+
+
+article{
+    display: flex;
+    justify-content: space-between;
+
+    .indicators{
+        width: 256/1312*100%;
+        background-color: aqua;
     }
 }

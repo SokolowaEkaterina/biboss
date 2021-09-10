@@ -1,0 +1,66 @@
+.notice{
+
+    .notice_container{
+        margin-top: -78px;
+        background-color: #FFF;
+        border-radius: 16px;
+        padding: 24px;
+
+        display: flex;
+        justify-content: space-between;
+
+        box-shadow: $element_shadow;
+
+        .text_img{
+            display: flex;
+            .image{
+                overflow: hidden;
+                width: 152px;
+                height: 114px;
+                border-radius: 8px;
+                position: relative;
+                margin-right: 32px;
+
+                img{
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            h3, p, a{
+                display: block;
+                margin: 8px 0 ;
+            }
+
+        }
+
+        .representative{
+            width: 232px;
+            .image{
+                overflow: hidden;
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                position: relative;
+                float: left;
+                clear: both;
+                margin-right: 8px;
+
+                img{
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            span, .button{
+                display: block;
+            }
+
+            .button{
+                margin-top: 16px;
+            }
+        }
+    }
+}

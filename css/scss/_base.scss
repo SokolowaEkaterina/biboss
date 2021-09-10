@@ -42,6 +42,7 @@ h1,.h1, h2,.h2, h3,.h3, h4,.h4, h5,.h5, h6,.h6{
 
 h1,.h1{
     font-size: 48px;
+    line-height: 56px;
 }
 
 h2,.h2{
@@ -50,6 +51,7 @@ h2,.h2{
 
 h3,.h3{
     font-size: 24px;
+    line-height: 32px;
 }
 
 h4,.h4{
@@ -65,32 +67,60 @@ h6,.h6{
     font-size: 14px;
 }
 
+p{
+    font-size: 16px;
+    font-weight: 400;
+}
+
 .button{
     border: 1px solid transparent;
     display: inline-block;
     padding: 9px 16px;
     background-color: $button_color;
     border-radius: 6px;
+    font-weight: 700;
+    text-align: center;
 
     @include transition (all);
 
-    span{
-        color: #FFF;
-
-        @include transition (all);
-    }
-
-    .light{
-        font-weight: 400;
-    }
+    color: #FFF;
 
     &:hover{
         background-color: #FFF;
 
         border: 1px solid rgba(0, 0, 0, 0.2);
+        color: $main_color;
+    }
+}
 
-        span{
-            color: $main_color;
+.b_light{
+    font-weight: 400;
+}
+
+.link_arrov{
+    display: inline-block;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    color: $main_color;
+
+    &::after{
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        margin-left: 17px;
+        border-left: 2px solid rgba(0, 0, 0, 0.2);
+        border-top: 2px solid rgba(0, 0, 0, 0.2);
+        transform: rotate(130deg);
+        background-color: transparent;
+
+        @include transition(all);
+    }
+
+    &:hover{
+        &:after{
+            margin-left: 22px;
         }
     }
 }
