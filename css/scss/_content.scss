@@ -12,7 +12,7 @@
             width: calc(100% - 7px);
             margin: 0 auto;
             padding: 8px 0px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+            border-bottom: $borderes;
     
             input[type="submit"]{
                 position: absolute;
@@ -49,7 +49,7 @@
     }
 
     .content{
-        border-left:1px solid rgba(0, 0, 0, 0.20);
+        border-left: $borderes;
     }
 }
 
@@ -123,8 +123,34 @@ article{
     display: flex;
     justify-content: space-between;
 
+    margin-top: 40px;
+    
+    h3{
+        margin-bottom: 16px;
+    }
+
     .indicators{
         width: 256/1312*100%;
-        background-color: aqua;
+
+        .indicators_content{
+            border-top: $borderes;
+            padding-top: 8px;
+
+            .item{
+                margin: 8px 0px;
+            }
+        }
+    }
+
+    .article_content{
+        width: calc(80% - 32px);
+    }
+    .text_link{
+        padding-top: 24px;
+        border-top: $borderes;
+
+        .link_arrov{
+            margin-top: 16px;
+        }
     }
 }

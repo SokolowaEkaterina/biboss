@@ -1,0 +1,53 @@
+.franchise_cost{
+    margin-top: 32px;
+    padding: 24px 24px 37px 24px;
+    background-color: rgba(30, 160, 30, 0.1);
+    border-radius: 16px;
+
+    .franchise_cost_items{
+        border-bottom: $borderes;
+        padding-bottom: 16px;
+        .item{
+            width: 100%;
+            margin: 8px 0;
+            .item_name{
+                font-size: 16px;
+                color: rgba(0, 0, 0, 0.52);
+    
+                float: left;
+    
+            }
+    
+            p{
+                margin-left: 224px;
+            }
+        }
+    }
+
+    a{
+        position: relative;
+        font-weight: 700;
+        display: block;
+        width: 236px;
+        margin: 37px auto 0 auto;
+        text-align: center;
+        color: $main_color;
+        position: relative;
+
+        &::before{
+            content: "";
+            position: absolute;
+            left: -66px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url(../images/icon_download.svg);
+
+        }
+    }
+}

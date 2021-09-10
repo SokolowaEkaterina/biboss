@@ -7,6 +7,8 @@ $notification_color_2: #ED2F2F;
 $header_shadow: 0px 0px 30px 0px #00000026;
 $element_shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.15);
 
+$borderes: 1px solid rgba(0, 0, 0, 0.2);
+
 @mixin transition($property){
     -webkit-transition: $property 0.3s ease 0s;
     -moz-transition: $property 0.3s ease 0s;

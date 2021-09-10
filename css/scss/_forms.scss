@@ -1,4 +1,4 @@
-.svitch{
+input[type="checkbox"]{
     display: none;
     cursor: pointer;
 }
@@ -45,5 +45,228 @@
     &::before{
         left: 13px;
         color: $bt_svitch_color;
+    }
+}
+
+.forms_text{
+    margin-top: 32px;
+    padding: 24px;
+    border-radius: 16px;
+    background-color: rgba(236, 238, 242, 1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+    .representative{
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    form{
+        width: calc(50% - 17px);
+        overflow: hidden;
+        margin: -4px 0;
+
+        input,
+        textarea,
+        .check_box{
+            box-sizing: border-box;
+            width: 100%;
+            border-radius: 6px;
+            border: $borderes;
+
+            margin: 4px 0;
+        }
+
+        input{
+            position: relative;
+            height: 42px;
+            //background-color: #FFF;
+            padding: 9px 12px 9px 44px;
+            color: $main_color;
+
+            &::placeholder{
+                font-size: 16px;
+                color: rgba(0, 0, 0, 0.52);
+                
+            }
+
+            &:focus{
+                border: 1px solid $main_color;
+            }
+        }
+
+        textarea{
+            padding: 9px 12px;
+            height: 86px;
+            font-family: Arial, Helvetica, sans-serif;
+            resize: none;
+
+            &::placeholder{
+                font-size: 16px;
+                line-height: 24px;
+                color: $main_color;
+            }
+        }
+
+        .item{
+            position: relative;
+            &::before{
+                content: '';
+                width: 22px;
+                height: 22px;
+                //display: block;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 13px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: auto;
+                z-index: 3;
+                background-image: url(../images/icon_form_name.svg);
+            }
+        }
+
+        .email::before{
+            background-image: url(../images/icon_form_email.svg);
+        }
+
+        .phone::before{
+            background-image: url(../images/icon_form_phone.svg);
+        }
+
+        .check_box{
+            margin: -3px 0 4px 0;
+            padding:24px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            vertical-align: middle;
+
+            p{
+                font-size: 14px;
+                line-height: 20px;
+                color: rgba(0, 0, 0, 0.52);
+                text-align: right;
+                width: 81px;
+                vertical-align: middle;
+                align-items: center;
+            }
+
+            .label_check_box{
+                cursor: pointer;
+                position: relative;
+                vertical-align: middle;
+
+                &::before{
+                    content: '';
+                    width: 32px;
+                    height: 32px;
+                    display: inline-block;
+                    background-color: #FFF;
+                    border: 2px solid rgba(0, 0, 0, 0.2);
+                    border-radius: 6px;
+                    vertical-align: middle;
+
+                    margin-right: 8px;
+                    @include transition(all);
+                }
+
+                &::after{
+                    content: '';
+                    width: 15px;
+                    height: 10px;
+                    position: absolute;
+                    left: 10px;
+                    top: 50%;
+                    margin-top: -7.5px;
+                    transform: rotate(-45deg);
+                    background-color: transparent;
+                    border-bottom: 2px solid rgba(13, 135, 13, 1);
+                    border-left: 2px solid rgba(13, 135, 13, 1);
+                    vertical-align: middle;
+
+                    opacity: 0;
+
+                    @include transition(all);
+                }
+            }
+
+            input[type="checkbox"]:checked + .label_check_box::before{
+                border: 2px solid rgba(13, 135, 13, 1);
+            }
+
+            input[type="checkbox"]:checked + .label_check_box::after{
+                opacity: 100;
+            }
+        }
+
+        input[type="submit"]{
+            color: #FFF;
+            height: 50px;
+            padding: 13px 12px;
+
+            &:hover{
+                color: $main_color;
+            }
+        }
+
+        .text_notice{
+            font-size: 14px;
+            line-height: 20px;
+            color: rgba(0, 0, 0, 0.52);
+            position: relative;
+            padding-left: 51px;
+            margin-top: 16px;
+            //width: clac(100% - 35px);
+
+            &::before{
+                content: '';
+                width: 35px;
+                height: 37px;
+                // display: inline-block;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: auto;
+                z-index: 3;
+                background-image: url(../images/icon_hend.svg);
+            }
+        }
+    }
+    .text{
+        width: calc(50% - 17px);
+
+        h5{
+            margin-bottom: 16px;
+        }
+
+        ul{
+            margin: -8px 0;
+            li{
+                margin: 8px 0 ;
+                padding-left: 30px;
+                position: relative;
+                &::before{
+                    content: '';
+                    // display: inline-block;
+                    position: absolute;
+                    left: 0;
+                    top: 4px;
+                    width: 15px;
+                    height: 8px;
+                    transform: rotate(-45deg);
+                    background-color: transparent;
+                    border-bottom: 2px solid rgba(13, 135, 13, 1);
+                    border-left: 2px solid rgba(13, 135, 13, 1);
+                }
+            }
+        }
+
     }
 }
