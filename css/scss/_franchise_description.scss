@@ -40,3 +40,15 @@
         }
     }
 }
+@media screen and (max-width:700px){
+    .franchise_description{
+        .franchise_galery{
+            flex-wrap: wrap;
+            .item{
+                width: calc(50% - 4px);
+                margin:4px 0;
+                height: 160px;
+            }
+        }
+    }
+}

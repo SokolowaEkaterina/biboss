@@ -1,4 +1,5 @@
 header{
+    position: relative;
     box-sizing: border-box;
     height: 56px;
     width: 100%;
@@ -6,13 +7,68 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    //vertical-align: middle;
+    vertical-align: middle;
 
     box-shadow: $header_shadow;
 
     .logo_location{
         display: flex;
-        align-items: flex-end;
+        align-items:center;
+
+        .menu_button{
+            margin-right: 15px;
+            display: none;
+            // position: absolute;
+            cursor: pointer;
+            width: 18px;
+            height: 14px;
+            position: relative;
+
+            @include transition(all);
+            span{
+                position: relative;
+                width: 100%;
+                display: block;
+                margin-top: 6px;
+                height: 2px;
+                background-color: rgba(0, 0, 0, 0.2);
+                @include transition (all);
+            }
+            &::before{
+                content: '';
+                width: 100%;
+                height: 2px;
+                top: 0;
+                //bottom: -6px;
+                background-color: rgba(0, 0, 0, 0.2);
+                position: absolute;
+                @include transition (all);
+            }
+
+            &::after{
+                content: '';
+                width: 100%;
+                height: 2px;
+                bottom: 0px;
+                background-color: rgba(0, 0, 0, 0.2);
+                position: absolute;
+                @include transition (all);
+            }
+        }
+        .menu_active{
+            span{
+                opacity: 0;
+            }
+            &::before{
+                transform: rotate(45deg);
+                top: 6px;
+            }
+
+            &::after{
+                transform: rotate(-45deg);
+                bottom: 6px;
+            }
+        }
 
         .logo{
 
@@ -155,3 +211,45 @@ header{
         }
     }
 }
+
+@media screen and (max-width: 1146px){
+    header{
+        padding: 12px 10px 12px 15px;
+    }
+}
+@media screen and (max-width:1000px){
+    header{
+        .logo_location{
+            .menu_button{
+                display: block;
+            }
+        }
+    }
+}
+@media screen and (max-width: 850px){
+    header{
+        .location{
+            display: none;
+        }
+        .profile_buttons{
+            float: right;
+        }
+
+        .button,
+        .notefication{
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 400px){
+    header{
+        .logo_location{
+            .logo{
+                span{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+

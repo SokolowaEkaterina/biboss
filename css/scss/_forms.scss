@@ -270,3 +270,33 @@ input[type="checkbox"]{
 
     }
 }
+
+@media screen and (max-width:700px){
+    .forms_text{
+        flex-wrap: wrap;
+        form{
+            width: 100%;
+        }
+        .text{
+            border-top: $borderes;
+            margin-top: 24px;
+            padding-top: 24px;
+            width: 100%;
+
+            h5{
+                text-align: center;
+            }
+        }
+    }
+}
+@media screen and (max-width:370px){
+    .forms_text{
+        form{
+            .check_box{
+                p{
+                    display: none;
+                }
+            }
+        }
+    }
+}

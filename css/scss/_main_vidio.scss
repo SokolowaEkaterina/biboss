@@ -176,3 +176,37 @@
         }
     }
 }
+
+@media screen and (max-width: 1497px){
+    .main_vidio{
+        .vidio_vote{
+            .vote{
+                .vote_cos_bt{
+                    display: inline-block;
+                    font-size: 0px;
+                    width: 60px;
+                    height: 60px;
+                    padding: 0px;
+                    margin: 8px 0;
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 1146px){
+    .main_vidio{
+        .vidio_vote{
+            flex-wrap: wrap;
+            .vidio{
+                width: 100%;
+            }
+            .vote{
+                text-align: center;
+                width: 100%;
+            }
+
+        }
+    }
+}
