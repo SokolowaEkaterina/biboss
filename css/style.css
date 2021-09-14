@@ -187,6 +187,11 @@ p {
   margin-left: 22px;
 }
 
+@media screen and (max-width: 375px) {
+  .link_arrov {
+    font-size: 13px;
+  }
+}
 header {
   position: relative;
   -webkit-box-sizing: border-box;
@@ -1232,7 +1237,7 @@ footer .country .box span {
 }
 .main_vidio .vidio_vote .vidio a::after {
   content: "Смотреть видео";
-  display: block;
+  position: absolute;
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
@@ -1241,7 +1246,7 @@ footer .country .box span {
   width: 115px;
   position: absolute;
   left: 50%;
-  bottom: 100px;
+  bottom: calc(50% - 200px);
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   opacity: 0;
@@ -1253,7 +1258,7 @@ footer .country .box span {
 }
 .main_vidio .vidio_vote .vidio a:hover::after {
   opacity: 100;
-  bottom: 158px;
+  bottom: calc(50% - 150px);
 }
 .main_vidio .vidio_vote .vote {
   width: 22.8571428571%;
@@ -1341,6 +1346,45 @@ footer .country .box span {
   .main_vidio .vidio_vote .vote {
     text-align: center;
     width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main_vidio .vidio_vote {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .main_vidio .vidio_vote .vidio {
+    width: 100%;
+  }
+  .main_vidio .vidio_vote .vidio a::before {
+    width: 60px;
+    height: 60px;
+  }
+  .main_vidio .vidio_vote .vidio a::after {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .main_vidio .vidio_vote .vidio a:hover::after {
+    opacity: 100;
+    bottom: calc(50% - 100px);
+  }
+}
+@media screen and (max-width: 477px) {
+  .main_vidio .vidio_vote .vidio a::before {
+    width: 60px;
+    height: 60px;
+  }
+  .main_vidio .vidio_vote .vidio a::after {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .main_vidio .vidio_vote .vidio a:hover::before {
+    -webkit-transform: translate(-50%, -80%);
+            transform: translate(-50%, -80%);
+  }
+  .main_vidio .vidio_vote .vidio a:hover::after {
+    opacity: 100;
+    bottom: calc(50% - 70px);
   }
 }
 .notice .notice_container {
@@ -1470,7 +1514,6 @@ footer .country .box span {
   padding-top: 40px;
 }
 .competitors .competitors_slider {
-  overflow: hidden;
   margin: 32px -10px;
   width: 100%;
   display: -webkit-box;
@@ -1549,6 +1592,30 @@ footer .country .box span {
   margin-top: 16px;
 }
 
+@media screen and (max-width: 975px) {
+  .competitors .competitors_slider .item .vidio::before {
+    width: 80px;
+    height: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .competitors .competitors_slider {
+    overflow: visible;
+  }
+  .competitors .competitors_slider .item {
+    width: 100%;
+    margin: 0 20px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .competitors .competitors_slider {
+    overflow: visible;
+  }
+  .competitors .competitors_slider .item {
+    width: 100%;
+    margin: 0 10px;
+  }
+}
 .franchise_cost {
   margin-top: 32px;
   padding: 24px 24px 37px 24px;

@@ -47,4 +47,16 @@ $(document).ready(() => {
     //     arrows: false,
     //     centerMode: true,
     // });
+
+    $(window).on('load resize', function() {
+        if ($(window).width() < 768) {
+          $('.competitors_slider').slick({
+            centerMode: true,
+            arrows: false,
+            slidesToShow: 1,
+          });
+        } else {
+          $(".competitors_slider").slick("unslick");
+        }
+      });
 });

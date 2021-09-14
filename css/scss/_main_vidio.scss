@@ -72,7 +72,8 @@
                 }
                 &::after{
                     content: "Смотреть видео";
-                    display: block;
+                    // display: block;
+                    position: absolute;
                     font-size: 24px;
                     font-weight: 700;
                     line-height: 32px;
@@ -81,7 +82,8 @@
                     width: 115px;
                     position: absolute;
                     left: 50%;
-                    bottom: 100px;
+                    // bottom: 100px;
+                    bottom: calc(50% - 200px);
                     transform: translateX(-50%);
 
                     opacity: 0;
@@ -95,7 +97,7 @@
                     }
                     &::after{
                         opacity: 100;
-                        bottom: 158px;
+                        bottom: calc(50% - 150px);
                     }
                 }
             }
@@ -205,6 +207,67 @@
             .vote{
                 text-align: center;
                 width: 100%;
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width:768px){
+    .main_vidio{
+        .vidio_vote{
+            flex-wrap: wrap;
+            .vidio{
+                width: 100%; a{
+                    &::before{
+                        width: 60px;
+                        height: 60px;
+                    }
+
+                    &::after{
+                        font-size: 20px;
+                        line-height: 22px;
+                    }
+
+                    &:hover{
+                        &::after{
+                            opacity: 100;
+                            bottom: calc(50% - 100px);
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width:477px){
+    .main_vidio{
+        .vidio_vote{
+            .vidio{
+                a{
+                    &::before{
+                        width: 60px;
+                        height: 60px;
+                    }
+
+                    &::after{
+                        font-size: 20px;
+                        line-height: 22px;
+                    }
+
+                    &:hover{
+                        &::before{
+                            transform: translate(-50% , -80%);
+
+                        }
+                        &::after{
+                            opacity: 100;
+                            bottom: calc(50% - 70px);
+                        }
+                    }
+                }
             }
 
         }
