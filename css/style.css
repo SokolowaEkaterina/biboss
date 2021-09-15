@@ -407,7 +407,7 @@ header .profile_buttons .profil .profil_img img {
     padding: 12px 10px 12px 15px;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1110px) {
   header .logo_location .menu_button {
     display: block;
   }
